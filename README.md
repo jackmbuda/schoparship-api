@@ -63,22 +63,6 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 A `scholarships.db` file will be automatically created in your project directory upon the first run.
 
-## File Structure
-
-/
-|-- main.go                 # Main application logic, routing, and handlers
-|-- go.mod                  # Go module definitions
-|-- go.sum                  # Go module checksums
-|-- Dockerfile              # Instructions for building a Docker container
-|-- README.md               # This file
-|-- scholarships.db         # The SQLite database file (created on run)
-|-- .gitignore              # Files for Git to ignore
-|
-|-- static/
-|   -- style.css # CSS stylesheets |-- templates/
-|-- apply.html          # HTML template for the application form
-`-- applications.html   # HTML template for viewing submissions
-
 ## Deployment
 
 This application is ready to be deployed. It includes a `Dockerfile` for building a containerized version of the app, which can be hosted on any platform that supports Docker containers.
