@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Applications</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Submitted Scholarship Applications</h1>
+        {{if .}}
+            {{range .}}
+                <div class="application">
+                    <h2>{{.FirstName}} {{.LastName}}</h2>
+                    <p><strong>Email:</strong> {{.Email}}</p>
+                    <p><strong>Submitted:</strong> {{.SubmittedAt.Format "Jan 02, 2006 3:04 PM"}}</p>
+                    <p><strong>Essay:</strong></p>
+                    <p>{{.Essay}}</p>
+                </div>
+            {{end}}
+        {{else}}
+            <p>No applications have been submitted yet.</p>
+        {{end}}
+        <p>
+            <a href="/">Back to Application Form</a>
+        </p>
+    </div>
+</body>
+</html>

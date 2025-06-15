@@ -1,0 +1,16 @@
+# SQLite Database Files - VERY IMPORTANT
+scholarships.db
+scholarships.db-journal
+scholarships.db-shm
+scholarships.db-wal
+
+# Compiled Go binary
+server
+main.exe
+
+# OS-specific files
+.DS_Store
+
+# IDE configuration folders
+.idea/
+.vscode/

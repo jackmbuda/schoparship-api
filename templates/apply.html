@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Scholarship</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scholarship Application</h1>
+        <form action="/submit" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="essay">Essay:</label>
+            <textarea id="essay" name="essay" rows="10" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+         <p>
+            <a href="/applications">View All Applications</a>
+        </p>
+    </div>
+</body>
+</html>

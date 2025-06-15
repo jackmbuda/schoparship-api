@@ -1,0 +1,19 @@
+# fly.toml file
+app = 'my-scholarship-app' # This will be your app name
+primary_region = 'sea'     # This will be your chosen region
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0 # Set to 1 for faster cold starts
+  processes = ['app']
+
+# Add this section to mount your volume
+[mounts]
+  source = 'scholarships_data' # Must match the volume name you created
+  destination = '/data'       # The path inside the container
